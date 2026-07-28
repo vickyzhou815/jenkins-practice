@@ -1,1 +1,14 @@
-pipeline { agent any stages { stage('Hello') { steps { echo 'Hello from Jenkins' } } stage('Simulate build') { steps { sh 'echo Building...; sleep 2; echo Build complete' } } stage('Simulate test') { steps { sh 'echo Running tests...; sleep 2; echo All tests passed' } } } }
+pipeline { 
+  agent any 
+  stages { 
+    stage('Hello') { 
+      steps { echo 'Hello from Jenkins' } 
+    } 
+    stage('Simulate build') { 
+      steps { sh 'echo Building...; sleep 2; echo Build complete' } 
+    } 
+    stage('Simulate test') {
+      steps { sh 'echo Running tests...; sleep 2; echo All tests passed' } 
+    } 
+  } 
+}
